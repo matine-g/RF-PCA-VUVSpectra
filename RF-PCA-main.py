@@ -16,7 +16,7 @@ from rdkit import Chem
 start_time = time.time()
 
 ### Load the data
-df = pd.read_excel('C:/Users/QS/Downloads/linh/VUV_big_regression_updated/datasets/big_spectra_normalized.xlsx')
+df = pd.read_excel('data/sample/big_spectra_normalized.xlsx')
 
 names_small = []
 for file_path in df.Path:
@@ -74,7 +74,7 @@ data = df.copy()
 data['Mols'] = data['SMILES'].apply(Chem.MolFromSmiles)
 data['Mols'] = data['Mols'].apply(Chem.AddHs)
 
-fingerprint_df = pd.read_csv('C:/Users/QS/Downloads/orgfingerprints.csv')
+fingerprint_df = pd.read_csv('data/sample/orgfingerprints.csv')
 all_fingerprints_array = fingerprint_df.drop(columns=['Molecule_Name']).values
 molecule_names_array = fingerprint_df['Molecule_Name'].values
 fingerprint_dict = dict(zip(molecule_names_array, all_fingerprints_array))
@@ -291,4 +291,5 @@ def plot_top_features_with_categories(X, y, feature_names, top_n=18,
 
 # Call the function for X_new1 
 plot_top_features_with_categories(X_new1, y_pca, X_new1_names, top_n=18)
+
 
