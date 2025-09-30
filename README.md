@@ -6,8 +6,8 @@ Code for:
 ## How to run (quick demo)
 1) Install:
    pip install -r requirements.txt
-   # RDKit is best via conda:
-   # conda install -c conda-forge rdkit
+   RDKit is best via conda:
+   conda install -c conda-forge rdkit
 
 2) Use the sample paths in `main_rf_pca.py` (already set by default):
 
