@@ -24,6 +24,12 @@ Code for:
 - `main_rf_pca.py` — main pipeline.
 - `Lib_feats_new.py` — RDKit-based featurization (truncated E-state, CDS, literal bag-of-bonds, ABOCH).
 
-## Data availability
-A sample dataset can be placed in `data/sample/` to demonstrate the pipeline.
-The full processed dataset used in the paper is available upon reasonable request to the authors.
+## Data availability & provenance
+
+- **Experimental spectra:** Obtained from VUV Analytics, Inc. (https://vuvanalytics.com). 
+- **Molecular structures:** SDF files retrieved from PubChem (https://pubchem.ncbi.nlm.nih.gov).
+- **Sample data:** A sample dataset is included to demonstrate the pipeline end-to-end.
+- **Full processed dataset:** Available from the authors upon reasonable request.
+
+Code for this work is hosted at: https://github.com/matine-g/RF-PCA-VUVSpectra
+
