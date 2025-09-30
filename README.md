@@ -25,5 +25,5 @@ Code for:
 - `Lib_feats_new.py` — RDKit-based featurization (truncated E-state, CDS, literal bag-of-bonds, ABOCH).
 
 ## Data availability
-A small sample dataset can be placed in `data/sample/` to demonstrate the pipeline.
+A sample dataset can be placed in `data/sample/` to demonstrate the pipeline.
 The full processed dataset used in the paper is available upon reasonable request to the authors.
