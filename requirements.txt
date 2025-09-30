@@ -1,0 +1,7 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+openpyxl
+# RDKit is best installed via conda (not pip):
+#   conda install -c conda-forge rdkit
