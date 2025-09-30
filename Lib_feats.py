@@ -34,10 +34,16 @@ import os
 from rdkit import Chem, DataStructs
 import matplotlib.pyplot as plt
 
-CURR_DIR2 = os.path.dirname(os.path.abspath('C:/Users/QS/Downloads/spektral'))
-sys.path.append(CURR_DIR2)
-from spektral.io import _parse_header, _parse_counts_line, _parse_atoms_block, _parse_bonds_block, _parse_properties, _parse_data_fields,  _get_atomic_num
-#from spektral.chem import get_atomic_number
+# Spektral is needed for SDF parsing helpers
+try:
+    from spektral.io import (
+        _parse_header, _parse_counts_line, _parse_atoms_block, _parse_bonds_block,
+        _parse_properties, _parse_data_fields, _get_atomic_num
+    )
+except Exception as e:
+    raise ImportError(
+        "Spektral is required. Install with: pip install 'spektral==1.*'"
+    ) from e
 
 #### Toolbox for Euclidean distance
 from sklearn.metrics.pairwise import euclidean_distances
@@ -558,4 +564,5 @@ def Count_bonds(mol):
         if mol.GetBondWithIdx(i).GetIsAromatic():
             arom_bond+=1
     
+
     return [conj_double, arom_bond]
